@@ -1,5 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
 @import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&family=Outfit:wght@400;700&display=swap");
+
+  $ScissorsGradient: radial-gradient(hsl(39, 89%, 49%),hsl(40, 84%, 53%));
+  $PaperGradient: radial-gradient(hsl(230, 89%, 62%),hsl(230, 89%, 65%));
+  $RockGradient: radial-gradient(hsl(349, 71%, 52%),hsl(349, 70%, 56%));
+
+  $DarkText: hsl(229, 25%, 31%);
+  $ScoreText: hsl(229, 64%, 46%);
+  $HeaderOutline: hsl(217, 16%, 45%);
+
 * {
   margin: 0;
   padding: 0;
@@ -8,4 +17,155 @@
 body {
   font-family: "Barlow Semi Condensed", sans-serif;
   font-family: "Outfit", sans-serif;
+  width: 100vw;
+  height: 100vh;
+}
+.maxContainer{
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 1fr 2fr 1fr 1fr;
+    grid-template-areas:
+    "header"
+    "game"
+    "result"
+    "rules";
+    justify-items: center;
+    align-items: center;
+}
+.header{
+ grid-area: header;
+ width: 100%;
+ display: flex;
+ justify-content: center;
+ padding-top: 30px;
+}
+.score{
+    width: 320px;
+    height: 78px;
+    border: 2px solid $HeaderOutline;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo{
+    width: 65px;
+    height: 45px;
+    margin-left: 10px;
+}
+.scoreNum{
+    width: 65px;
+    height: 60px;
+    background-color: whitesmoke;
+    border: 1px solid $DarkText;
+    border-radius: 5px;
+    margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+.pscoreText{
+    font-size: 8px;
+    color: $ScoreText;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-top:25px;
+    position: relative;
+    top: 10px;
+}
+.pscoreNum{
+    font-size: 30px;
+    font-weight: 700;
+    font-family: "Barlow Semi Condensed", sans-serif;
+    color: $DarkText;
+    position: relative;
+    bottom: 10px;
+}
+.game{
+    grid-area: game;
+}
+.paperTriangleScissors{
+    margin-top: 100px;
+    position: relative;
+    display: flex;
+}
+.triangle{
+    width: 200px;
+    height: 150px;
+}
+.circleExt{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.circleExt:hover{
+    cursor: pointer;
+}
+.circleInt{
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    background-color: whitesmoke;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.paper{
+    background: $PaperGradient;
+    position: relative;
+    left: 80px;
+    bottom: 45px;
+}
+.scissors{
+    background: $ScissorsGradient;
+    position: relative;
+    right: 80px;
+    bottom: 45px;
+}
+.rock{
+    background: $RockGradient;
+    justify-self: end !important;
+}
+.icon_{
+    width: 32px;
+    height: 40px;
+}
+.rock_div{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    bottom: 80px;
+}
+.result{
+    grid-area: result;color: white;
+}
+.rules{
+    grid-area: rules;   
+    border: solid 1px;
+    border-radius: 5px;
+    border-color: whitesmoke;
+    width: 100px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 25px;
+}
+.rules:hover{
+    cursor: pointer;
+}
+.prules{
+    font-family: "Barlow Semi Condensed", sans-serif;
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: whitesmoke; 
+    margin-top: 15px;
 }
