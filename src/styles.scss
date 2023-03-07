@@ -17,11 +17,10 @@
 body {
   font-family: "Barlow Semi Condensed", sans-serif;
   font-family: "Outfit", sans-serif;
-  width: 100vw;
 }
 .maxContainer{
     width: 100%;
-    height: 100%;
+
     background: radial-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
     display: grid;
     grid-template-columns: 100%;
@@ -39,7 +38,6 @@ body {
  width: 100%;
  display: flex;
  justify-content: center;
- 
 }
 .score{
     width: 320px;
@@ -89,7 +87,7 @@ body {
     grid-area: game;
 }
 .paperTriangleScissors{
-    margin-top: 100px;
+    top: 45px;
     position: relative;
     display: flex;
 }
@@ -141,7 +139,7 @@ body {
     display: flex;
     justify-content: center;
     position: relative;
-    bottom: 80px;
+    bottom: 40px;
 }
 .result{
     grid-area: result;color: white;
