@@ -10,7 +10,7 @@ export class AppComponent {
 
   noinit = true;
 
-  secondResult = false;
+  secondResult = true;
 
   picked(choice: string)
   {

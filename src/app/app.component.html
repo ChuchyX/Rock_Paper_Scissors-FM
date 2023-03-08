@@ -1,7 +1,7 @@
 <div class="maxContainer">
   <div class="header">
     <div class="score">
-      <img src="../assets/img/logo.svg" alt="logo" class="logo">
+      <img src="../assets/img/logo.svg" alt="logo" class="logo" />
       <div class="scoreNum">
         <p class="pscoreText">SCORE</p>
         <p class="pscoreNum">12</p>
@@ -10,43 +10,80 @@
   </div>
 
   <div class="game">
-    <div class="paperTriangleScissors" *ngIf="noinit">    
-      <div class="circleExt paper" (click)="picked('paper')">   
+    <div class="paperTriangleScissors" *ngIf="noinit">
+      <div class="circleExt paper" (click)="picked('paper')">
         <div class="circleInt">
-          <img src="../assets/img/icon-paper.svg" alt="icon_paper" class="icon_">
-        </div>    
+          <img
+            src="../assets/img/icon-paper.svg"
+            alt="icon_paper"
+            class="icon_"
+          />
+        </div>
       </div>
-      <img src="../assets/img/bg-triangle.svg" alt="triangle" class="triangle">
-      <div class="circleExt scissors" (click)="picked('scissors')">   
+      <img
+        src="../assets/img/bg-triangle.svg"
+        alt="triangle"
+        class="triangle"
+      />
+      <div class="circleExt scissors" (click)="picked('scissors')">
         <div class="circleInt">
-          <img src="../assets/img/icon-scissors.svg" alt="icon_scissors" class="icon_">
-        </div>    
+          <img
+            src="../assets/img/icon-scissors.svg"
+            alt="icon_scissors"
+            class="icon_"
+          />
+        </div>
       </div>
     </div>
     <div class="rock_div" *ngIf="noinit">
-      <div class="circleExt rock" (click)="picked('rock')">   
+      <div class="circleExt rock" (click)="picked('rock')">
         <div class="circleInt">
-          <img src="../assets/img/icon-rock.svg" alt="icon_rock" class="icon_">
-        </div>    
+          <img
+            src="../assets/img/icon-rock.svg"
+            alt="icon_rock"
+            class="icon_"
+          />
+        </div>
       </div>
     </div>
 
-    <div class="result_init_container" *ngIf="!noinit">    
-      <div class="circleExt circleExt2">   
-        <div class="circleInt">
-          <img src="../assets/img/icon-paper.svg" alt="icon_paper" class="icon_">
-        </div>    
-      </div>
-     
-      <div class="circleExt circleExt2" *ngIf="secondResult">   
-        <div class="circleInt">
-          <img src="../assets/img/icon-paper.svg" alt="icon_scissors" class="icon_">
-        </div>    
-      </div>
+    <div class="miwrapper">
+      <div class="result_init_container" *ngIf="!noinit">
+        <div class="me">
+          <div class="circleExt circleExt2">
+            <div class="circleInt">
+              <img
+                src="../assets/img/icon-paper.svg"
+                alt="icon_paper"
+                class="icon_"
+              />
+            </div>
+          </div>
 
-      <div class="emptyCircle" *ngIf="!secondResult"></div>
+          
+        </div>
+
+        <div class="cpu">
+          <div class="circleExt circleExt2" *ngIf="secondResult">
+            <div class="circleInt">
+              <img
+                src="../assets/img/icon-paper.svg"
+                alt="icon_scissors"
+                class="icon_"
+              />
+            </div>
+          </div>
+
+          <div class="emptyCircle" *ngIf="!secondResult"></div>
+
+          
+        </div>
+      </div>
+      <div class="ptexts" *ngIf="!noinit">
+        <p class="youpicked ptext">YOU PICKED</p>
+        <p class="cpupicked ptext">THE HOUSE PICKED</p>
+      </div>
     </div>
-    
   </div>
 
   <div class="result"></div>
@@ -56,19 +93,32 @@
   </div>
 </div>
 
-
-
 <!-- Modal -->
-<div class="modal fade modalRules" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div
+  class="modal fade modalRules"
+  id="exampleModal"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
         <h1 class="modal-title fs-8" id="exampleModalLabel">RULES</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
       </div>
       <div class="modal-body">
-        <img src="../assets/img/image-rules.svg" alt="image_rules" class="img_rules">
-      </div>     
+        <img
+          src="../assets/img/image-rules.svg"
+          alt="image_rules"
+          class="img_rules"
+        />
+      </div>
     </div>
   </div>
 </div>
