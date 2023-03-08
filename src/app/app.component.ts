@@ -16,5 +16,6 @@ export class AppComponent {
   {
     this.noinit = false;
     console.log();
+    console.log(choice);
   }
 }
