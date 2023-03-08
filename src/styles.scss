@@ -92,7 +92,7 @@ body {
     width: 100%;   
 }
 .paperTriangleScissors{
-    top: 120px;
+    top: 80px;
     position: relative;
     display: flex;
     justify-content: center;
@@ -144,7 +144,7 @@ body {
     display: flex;
     justify-content: center;
     position: relative;
-    top: 25px;
+    bottom: 10px;
 }
 .result{
     grid-area: result;color: white;
@@ -190,8 +190,14 @@ body {
     display: flex;
     justify-content: space-around;
 }
-.circleExt2{
+.paperResult{
     background: $PaperGradient;
+}
+.scissorsResult{
+    background: $ScissorsGradient;
+}
+.rockResult{
+    background: $RockGradient;
 }
 .emptyCircle{
     width: 75px;
@@ -220,4 +226,39 @@ body {
 }
 .cpupicked{
     margin-left: 20px;
+}
+.result{
+    margin-top: 20px;
+}
+.hresult{
+    font-size: 50px;
+    font-weight: 700;
+    font-family: "Barlow Semi Condensed", sans-serif;
+}
+.buttonReplay{
+  width: 175px;
+  height: 40px;
+  background-color: whitesmoke;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.buttonReplayText{
+    color: $DarkText;
+    font-family: "Barlow Semi Condensed", sans-serif;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin: 5px;
+}
+.buttonReplay:hover{
+    cursor: pointer;
+}
+.draw{
+    position: relative;
+    left: 25px;
+}
+.lose{
+    position: relative;
+    right: 10px;
 }

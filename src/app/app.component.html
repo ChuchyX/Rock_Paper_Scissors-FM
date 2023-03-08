@@ -4,7 +4,7 @@
       <img src="../assets/img/logo.svg" alt="logo" class="logo" />
       <div class="scoreNum">
         <p class="pscoreText">SCORE</p>
-        <p class="pscoreNum">12</p>
+        <p class="pscoreNum">{{score}}</p>
       </div>
     </div>
   </div>
@@ -50,10 +50,30 @@
     <div class="miwrapper">
       <div class="result_init_container" *ngIf="!noinit">
         <div class="me">
-          <div class="circleExt circleExt2">
+          <div class="circleExt paperResult" *ngIf="youChoice === 'paper'">
             <div class="circleInt">
               <img
                 src="../assets/img/icon-paper.svg"
+                alt="icon_paper"
+                class="icon_"
+              />
+            </div>
+          </div>
+
+          <div class="circleExt scissorsResult" *ngIf="youChoice === 'scissors'">
+            <div class="circleInt">
+              <img
+                src="../assets/img/icon-scissors.svg"
+                alt="icon_paper"
+                class="icon_"
+              />
+            </div>
+          </div>
+
+          <div class="circleExt rockResult" *ngIf="youChoice === 'rock'">
+            <div class="circleInt">
+              <img
+                src="../assets/img/icon-rock.svg"
                 alt="icon_paper"
                 class="icon_"
               />
@@ -64,10 +84,29 @@
         </div>
 
         <div class="cpu">
-          <div class="circleExt circleExt2" *ngIf="secondResult">
+          <div class="circleExt paperResult" *ngIf="secondResult && cpuChoice === 'paper'">
             <div class="circleInt">
               <img
                 src="../assets/img/icon-paper.svg"
+                alt="icon_scissors"
+                class="icon_"
+              />
+            </div>
+          </div>     
+          <div class="circleExt scissorsResult" *ngIf="secondResult && cpuChoice === 'scissors'">
+            <div class="circleInt">
+              <img
+                src="../assets/img/icon-scissors.svg"
+                alt="icon_scissors"
+                class="icon_"
+              />
+            </div>
+          </div>
+
+          <div class="circleExt rockResult" *ngIf="secondResult && cpuChoice === 'rock'">
+            <div class="circleInt">
+              <img
+                src="../assets/img/icon-rock.svg"
                 alt="icon_scissors"
                 class="icon_"
               />
@@ -86,7 +125,12 @@
     </div>
   </div>
 
-  <div class="result"></div>
+  <div class="result" *ngIf="secondResult">
+    <h1 class="hresult win" *ngIf="result === 1">YOU WIN</h1>
+    <h1 class="hresult lose" *ngIf="result === -1">YOU LOSE</h1>
+    <h1 class="hresult draw" *ngIf="result === 0">DRAW</h1>
+    <div class="buttonReplay" (click)="playAgain()"><p class="buttonReplayText">PLAY AGAIN</p></div>
+  </div>
 
   <div class="rules" data-bs-toggle="modal" data-bs-target="#exampleModal">
     <p class="prules">RULES</p>
