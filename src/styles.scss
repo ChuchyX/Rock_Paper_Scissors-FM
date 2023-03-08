@@ -263,3 +263,15 @@ body {
     position: relative;
     right: 10px;
 }
+
+@media (min-width: 765px)
+{
+    .result{
+        position: absolute;
+        bottom: 320px;
+    }
+    .rules{
+        position: absolute;
+        bottom: 120px;
+    }
+}
