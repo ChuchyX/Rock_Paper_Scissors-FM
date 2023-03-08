@@ -40,13 +40,11 @@ export class AppComponent{
     {
       if(this.cpuChoice === 'paper') this.result = 0;
       if(this.cpuChoice ==='scissors')
-      {
-        this.score--;
+      {      
         this.result = -1;
       }
       if(this.cpuChoice ==='rock')
       {
-        this.score++;
         this.result = 1;
       }
     }
@@ -55,12 +53,10 @@ export class AppComponent{
       if(this.cpuChoice === 'scissors') this.result = 0;
       if(this.cpuChoice ==='paper')
       {
-        this.score++;
         this.result = 1;
       }
       if(this.cpuChoice ==='rock')
       {
-        this.score--;
         this.result = -1;
       }
     }
@@ -69,18 +65,18 @@ export class AppComponent{
       if(this.cpuChoice === 'rock') this.result = 0;
       if(this.cpuChoice ==='scissors')
       {
-        this.score++;
         this.result = 1;
       }
       if(this.cpuChoice ==='paper')
       {
-        this.score--;
         this.result = -1;
       }
     }
     
     await setTimeout(() => {
       this.secondResult = true;
+      if(this.result === 1) this.score++;
+      if(this.result === -1) this.score--;
     }, 1000);
     
   }
