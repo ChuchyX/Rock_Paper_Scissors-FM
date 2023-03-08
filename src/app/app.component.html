@@ -10,25 +10,41 @@
   </div>
 
   <div class="game">
-    <div class="paperTriangleScissors">    
-      <div class="circleExt paper">   
+    <div class="paperTriangleScissors" *ngIf="noinit">    
+      <div class="circleExt paper" (click)="picked('paper')">   
         <div class="circleInt">
           <img src="../assets/img/icon-paper.svg" alt="icon_paper" class="icon_">
         </div>    
       </div>
       <img src="../assets/img/bg-triangle.svg" alt="triangle" class="triangle">
-      <div class="circleExt scissors">   
+      <div class="circleExt scissors" (click)="picked('scissors')">   
         <div class="circleInt">
           <img src="../assets/img/icon-scissors.svg" alt="icon_scissors" class="icon_">
         </div>    
       </div>
     </div>
-    <div class="rock_div">
-      <div class="circleExt rock">   
+    <div class="rock_div" *ngIf="noinit">
+      <div class="circleExt rock" (click)="picked('rock')">   
         <div class="circleInt">
           <img src="../assets/img/icon-rock.svg" alt="icon_rock" class="icon_">
         </div>    
       </div>
+    </div>
+
+    <div class="result_init_container" *ngIf="!noinit">    
+      <div class="circleExt circleExt2">   
+        <div class="circleInt">
+          <img src="../assets/img/icon-paper.svg" alt="icon_paper" class="icon_">
+        </div>    
+      </div>
+     
+      <div class="circleExt circleExt2" *ngIf="secondResult">   
+        <div class="circleInt">
+          <img src="../assets/img/icon-paper.svg" alt="icon_scissors" class="icon_">
+        </div>    
+      </div>
+
+      <div class="emptyCircle" *ngIf="!secondResult"></div>
     </div>
     
   </div>

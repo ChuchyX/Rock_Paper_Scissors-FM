@@ -89,9 +89,10 @@ body {
 }
 .game{
     grid-area: game;
+    width: 100%;   
 }
 .paperTriangleScissors{
-    top: 45px;
+    top: 120px;
     position: relative;
     display: flex;
 }
@@ -143,7 +144,7 @@ body {
     display: flex;
     justify-content: center;
     position: relative;
-    bottom: 40px;
+    top: 25px;
 }
 .result{
     grid-area: result;color: white;
@@ -179,7 +180,24 @@ body {
     font-weight: 600;
     color: $DarkText;
 }
-.img_rules
-{
-  
+.modal-body{
+    display: flex;
+    justify-content: center;
+}
+
+.result_init_container{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+.circleExt2{
+    background: $PaperGradient;
+}
+.emptyCircle{
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    background-color: hsl(237, 49%, 15%);
+    position: relative;
+    top: 10px;
 }

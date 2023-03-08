@@ -7,4 +7,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Rock_Paper_Scissors-FM';
+
+  noinit = true;
+
+  secondResult = false;
+
+  picked(choice: string)
+  {
+    this.noinit = false;
+    console.log();
+  }
 }
